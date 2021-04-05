@@ -25,7 +25,7 @@ export class PostList extends React.Component{
                 console.log(result);
                 for (let i = 0; i < result.length; i++){
                     this.setState({
-                        posts: this.state.posts.concat(<Tr index={i+1} title={result[i].title} author={result[i].author} date_added ={result[i].date_added}/>)
+                        posts: this.state.posts.concat(<Tr key={i} index={i+1} title={result[i].title} author={result[i].author} date_added ={result[i].date_added}/>)
                     })
                 }
             })
